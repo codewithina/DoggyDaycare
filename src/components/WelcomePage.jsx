@@ -12,10 +12,10 @@ const WelcomePage = () => {
 
       <div className="overlay">
         <h1>Doggy Daycare</h1>
-        <p>Vi tar hand om dina fyrbenta vänner med kärlek och omsorg.</p>
+        <p>Vi tar hand om dina fyrbenta vänner med massor av kärlek och omsorg.</p>
         <div className="hero-buttons">
-          <a href="/catalog" className="btn">Utforska Våra Hundar</a>
-          <a href="/contact" className="btn">Kontakta Oss</a>
+          <a href="#/catalog" className="btn">Utforska Våra Hundar</a>
+          <a href="#/contact" className="btn">Kontakta Oss</a>
         </div>
       </div>
     </div>
