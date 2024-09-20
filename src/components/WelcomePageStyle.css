@@ -39,22 +39,6 @@
     font-size: 2rem;
 }
 
-/* Header */
-h1 {
-    font-size: 4rem;
-    color: #ef9afb;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 1rem;
-}
-
-p {
-    font-size: 1.5rem;
-    max-width: 600px;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-    color: #fceeea;
-}
-
 /* Hero-buttons */
 .hero-buttons {
     display: flex;
@@ -62,26 +46,10 @@ p {
     gap: 20px;
 }
 
-.btn {
-    padding: 15px 30px;
-    background-color: #fba9c9;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #f47fac;
-    ;
-    color: white;
-}
-
 /* Smaller screens */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
+    .overlay h1 {
+        font-size: 4rem;
     }
 
     p {
