@@ -90,6 +90,6 @@
 
 .search-bar input:focus {
     outline: none;
-    border: 2px solid #f9caff;
+    border: 1px solid #f9caff;
     background-color: #fbe9fd;
 }
