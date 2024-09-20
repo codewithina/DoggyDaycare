@@ -6,7 +6,7 @@ function DogCatalog() {
 
   useEffect(() => {
     fetch('https://api.jsonbin.io/v3/b/66ea6857e41b4d34e4325758')
-      .then(response => response.json()) 
+      .then(response => response.json())
       .then(data => {
         setDogs(data.record);  // Save JSON-data in "dogs" state
         setLoading(false);
