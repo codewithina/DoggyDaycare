@@ -16,15 +16,48 @@ p {
 
 .btn {
   padding: 10px 30px;
-  background-color: #fba9c9;
-  color: white;
+  background-color: #ffbcd5;
+  color: #f0518e;
   text-decoration: none;
   border-radius: 30px;
   font-size: 1.1rem;
-  transition: background-color 0.3s ease;
+  transition: background-color 1s ease;
 }
 
-.btn:hover {
+.scroll-button {
+  margin-top: 30px;
+  padding: 15px 30px;
+  background-color: white;
+  color: #fba9c9;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 1s ease;
+}
+
+.btn:hover, .scroll-button:hover {
   background-color: #f47fac;
   color: white;
+  transition: color 1s ease;
 }
+
+  /* Smaller screens */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .catalog-page h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  
+    .contact-form {
+      padding: 20px;
+    }
+    
+  }
