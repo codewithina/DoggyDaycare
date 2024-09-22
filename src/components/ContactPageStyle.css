@@ -24,22 +24,6 @@
     max-width: 600px;
   }
   
-  .scroll-button {
-    margin-top: 30px;
-    padding: 15px 30px;
-    background-color: white;
-    color: #fba9c9;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .scroll-button:hover {
-    background-color: #f47fac;
-    color: white;
-  }
   
   /* Contact section */
   .contact-section {
@@ -109,19 +93,4 @@
   .contact-form button:hover {
     background-color: #fba9c9;
     transition: background-color 0.3s ease;
-  }
-  
-  /* Smaller screens */
-  @media (max-width: 768px) {
-    .hero h1 {
-      font-size: 2.5rem;
-    }
-  
-    .hero p {
-      font-size: 1rem;
-    }
-  
-    .contact-form {
-      padding: 20px;
-    }
   }
