@@ -26,16 +26,34 @@ function DogDetails() {
     return null;
   }
 
+  const genderIcon = dog.sex === 'female' ? '/src/assets/girl.png' : '/src/assets/boy.png';
+
   return (
-    <div>
-      <h1>{dog.name}</h1>
-      <img src={dog.img} alt={dog.name} />
-      <p>Breed: {dog.breed}</p>
-      <p>Age: {dog.age} years</p>
-      <p>Sex: {dog.sex}</p>
-      <p>Present at daycare: {dog.present ? 'Yes' : 'No'}</p>
-      <p>Owner: {dog.owner.name} {dog.owner.lastName}</p>
-      <p>Phone: {dog.owner.phoneNumber}</p>
+    <div className="dog-details-page">
+      <div className="dog-details-container">
+        <div className="dog-details-image">
+          <img src={dog.img} alt={dog.name} />
+        </div>
+        <div className="dog-details-info">
+          <h1>{dog.name}</h1>
+          <p id="breed"><span>Ras:</span> {dog.breed}</p>
+          <p><span>Ålder:</span> {dog.age} år</p>
+
+          {/* Show gender w icon */}
+          <p>
+            <span>Kön:</span>
+            <img
+              src={genderIcon}
+              alt={dog.sex === 'female' ? 'Girl' : 'Boy'}
+              className="gender-icon"
+            />
+          </p>
+
+          <p><span>Incheckad på dagis:</span> {dog.present ? 'Yes' : 'No'}</p>
+          <p><span>Ägare:</span> {dog.owner.name} {dog.owner.lastName}</p>
+          <p><span>Telefonnr:</span> {dog.owner.phoneNumber}</p>
+        </div>
+      </div>
     </div>
   );
 }
