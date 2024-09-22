@@ -4,14 +4,13 @@ import { Link } from 'react-router-dom';
 
 function DogCatalog() {
   const [dogs, setDogs] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     fetch('https://api.jsonbin.io/v3/b/66ea6857e41b4d34e4325758')
       .then(response => response.json())
       .then(data => {
-        setDogs(data.record); // Spara JSON-data i "dogs" state
+        setDogs(data.record); // Save JSON-data in "dogs" state
         setLoading(false);
       })
       .catch(error => {
@@ -20,7 +19,6 @@ function DogCatalog() {
       });
   }, []);
 
-  // Funktion för smidig scroll till hundkatalogen
   const handleScroll = (e) => {
     e.preventDefault();
     const catalogSection = document.getElementById("catalog-section");
@@ -45,7 +43,7 @@ function DogCatalog() {
         <a href="#catalog-section" className="scroll-button" onClick={handleScroll}>Möt våra kunder</a>
       </div>
 
-      {/* Hundkatalog */}
+      {/* Dog catalog */}
       <div id="catalog-section" className="catalog-page">
         <h1>Sök</h1>
 
@@ -61,21 +59,21 @@ function DogCatalog() {
 
         {/* Dog list */}
         <div className="dog-grid">
-  {filteredDogs.map(dog => (
-    <Link to={`/details/${dog.id}`} className="dog-card" key={dog.id}>
-      <div className="image-container">
-        <img src={dog.img} alt={dog.name} />
-        <div className="dog-overlay">
-          <div className="dog-info">
-            <h3>{dog.name}</h3>
-            <p>{dog.age} år</p>
-            <p className="breed">{dog.breed}</p>
-          </div>
+          {filteredDogs.map(dog => (
+            <Link to={`/details/${dog.chipNumber}`} className="dog-card" key={dog.chipNumber}>
+              <div className="image-container">
+                <img src={dog.img} alt={dog.name} />
+                <div className="dog-overlay">
+                  <div className="dog-info">
+                    <h3>{dog.name}</h3>
+                    <p>{dog.age} år</p>
+                    <p className="breed">{dog.breed}</p>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
         </div>
-      </div>
-    </Link>
-  ))}
-</div>
       </div>
     </div>
   );

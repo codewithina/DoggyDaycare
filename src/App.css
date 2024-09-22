@@ -14,6 +14,7 @@ p {
   color: #fceeea;
 }
 
+/* Buttons* */
 .btn {
   padding: 10px 30px;
   background-color: #ffbcd5;
@@ -36,53 +37,59 @@ p {
   transition: background-color 1s ease;
 }
 
-.btn:hover, .scroll-button:hover {
+.btn:hover,
+.scroll-button:hover {
   background-color: #f47fac;
   color: white;
   transition: color 1s ease;
 }
 
-  /* Hero-section */
-  .hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f8bdd3;
-    color: white;
-    text-align: center;
+/* Hero-section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8bdd3;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h1 {
+  color: #f47fac;
+  text-shadow: none;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+/* Smaller screens */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+  .catalog-page h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .contact-form {
     padding: 20px;
   }
-  
-  .hero h1 {
-    color: #f47fac;
-    text-shadow: none;
-    font-size: 4rem;
-    margin-bottom: 1rem;
-  }
-  
-  .hero p {
-    font-size: 1.2rem;
-    max-width: 600px;
-  }
 
-  /* Smaller screens */
-  @media (max-width: 768px) {
-    .hero h1 {
-      font-size: 2.5rem;
-    }
-
-    .catalog-page h1 {
-      font-size: 2.5rem;
-    }
-  
-    .hero p {
-      font-size: 1rem;
-    }
-  
-    .contact-form {
-      padding: 20px;
-    }
-    
-  }
+}
