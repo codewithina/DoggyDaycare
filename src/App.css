@@ -42,6 +42,31 @@ p {
   transition: color 1s ease;
 }
 
+  /* Hero-section */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8bdd3;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .hero h1 {
+    color: #f47fac;
+    text-shadow: none;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+  }
+
   /* Smaller screens */
   @media (max-width: 768px) {
     .hero h1 {

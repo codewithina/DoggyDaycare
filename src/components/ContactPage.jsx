@@ -4,7 +4,7 @@ import './ContactPageStyle.css';
 const ContactPage = () => {
 
   const handleScroll = (e) => {
-    e.preventDefault();  // Förhindra standardbeteendet
+    e.preventDefault(); 
     const contactSection = document.getElementById("contact-section");
     contactSection.scrollIntoView({ behavior: 'smooth' });
   };
