@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './DogCatalogStyle.css';
+import Header from './Header'; 
 import { Link } from 'react-router-dom';
 
 function DogCatalog() {
@@ -36,6 +37,7 @@ function DogCatalog() {
 
   return (
     <div>
+      <Header />
       {/* Hero Section */}
       <div className="hero">
         <h2>Katalog</h2>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './DogDetailsStyle.css';
+import Header from './Header'; 
 
 function DogDetails() {
   const { chipNumber } = useParams();
@@ -29,7 +30,10 @@ function DogDetails() {
   const genderIcon = dog.sex === 'female' ? '/src/assets/girl.png' : '/src/assets/boy.png';
 
   return (
+    <div>
+      <Header />
     <div className="dog-details-page">
+      
       <div className="dog-details-container">
         <div className="dog-details-image">
           <img src={dog.img} alt={dog.name} />
@@ -54,6 +58,7 @@ function DogDetails() {
           <p><span>Telefonnr:</span> {dog.owner.phoneNumber}</p>
         </div>
       </div>
+    </div>
     </div>
   );
 }

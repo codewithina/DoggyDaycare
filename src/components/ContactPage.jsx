@@ -1,5 +1,6 @@
 import React from 'react';
 import './ContactPageStyle.css';
+import Header from './Header'; 
 
 const ContactPage = () => {
 
@@ -11,6 +12,7 @@ const ContactPage = () => {
 
   return (
     <div>
+      <Header />
       {/* Hero Section */}
       <div className="hero">
         <h2>Kontakta oss</h2>
