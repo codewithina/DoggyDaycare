@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './HeaderStyle.css';
 
 function Header() {
@@ -12,7 +12,7 @@ function Header() {
   return (
     <header className="header">
       <div className="header-left">
-        <h1>Doggy Care</h1>
+        <h1>Doggy Daycare</h1>
       </div>
       
       {/* Hamburger button for mobile */}
@@ -22,9 +22,9 @@ function Header() {
 
       {/* Desktop menu */}
       <nav className={`header-right`}>
-        <Link className="btn" to="/" onClick={() => setMenuOpen(false)}>Start</Link>
-        <Link className="btn" to="/catalog" onClick={() => setMenuOpen(false)}>Kunder</Link>
-        <Link className="btn" to="/contact" onClick={() => setMenuOpen(false)}>Kontakt</Link>
+        <NavLink className="btn" to="/" onClick={() => setMenuOpen(false)}>Start</NavLink>
+        <NavLink className="btn" to="/catalog" onClick={() => setMenuOpen(false)}>Kunder</NavLink>
+        <NavLink className="btn" to="/contact" onClick={() => setMenuOpen(false)}>Kontakt</NavLink>
       </nav>
 
       {/* Mobile menu */}
