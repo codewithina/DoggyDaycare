@@ -1,98 +1,153 @@
 /* Dog grid */
-  .catalog-page {
-    padding: 0px;
-    background-color: #fce5ee;
-  }
-  
-  .catalog-page h1 {
-    color: #f47fac;
-    text-shadow: none;
-    margin-bottom: 1rem;
-  }
-  
-  .dog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 0px;
-  }
-  
-  .dog-card {
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 0px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-  }
+.catalog-page {
+  padding-top: 20px;
+  background-color: #fce5ee;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
 
-  /*
-  .dog-card:hover {
-    transform: scale(1.05);
-  }*/
-  
-  /* Image and overlay styling */
-  .image-container {
-    position: relative;
-    height: 200px;
-  }
-  
-  .image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .image-container .dog-overlay {
-    position: absolute;
-    text-align: center;
-    bottom: 0;
-    background: rgba(255, 55, 145, 0.5);
-    color: white;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.3s ease-in-out;
-    transform: translateY(100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .dog-card:hover .dog-overlay {
-    transform: translateY(0);
-  }
-  
-  .dog-info h3 {
-    font-size: 2rem;
-    margin: 5px 0;
-  }
-  
-  .dog-info p {
-    margin: 5px 0;
-  }
+.catalog-page h1 {
+  color: #f47fac;
+  text-shadow: none;
+  margin-bottom: 1rem;
+}
 
-  .dog-info .breed {
-    text-transform: capitalize;
-  }
-  
-  /* Search bar */
-  .search-bar {
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .search-bar input {
-    padding: 10px;
-    width: 95vw;
-    border-radius: 0px;
-    border: 1px solid #ccc;
-    font-size: 0.8rem;
-  }
-  
-  .search-bar input:focus {
-    outline: none;
-    border: 1px solid #f9caff;
-    background-color: #fbe9fd;
-  }
+.dog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0px;
+}
+
+.dog-card {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Image and overlay styling */
+.image-container {
+  position: relative;
+  height: 200px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-container .dog-overlay {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  background: rgba(255, 55, 145, 0.5);
+  color: white;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.dog-card:hover .dog-overlay {
+  transform: translateY(0);
+}
+
+.dog-info h3 {
+  font-size: 2rem;
+  margin: 5px 0;
+}
+
+.dog-info p {
+  margin: 5px 0;
+}
+
+.dog-info .breed {
+  text-transform: capitalize;
+}
+
+/* Search bar */
+.search-bar {
+  margin: 20px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.search-bar input {
+  padding: 10px;
+  margin: 5px;
+  width: 90vw;
+  border-radius: 0px;
+  border: 1px solid #ccc;
+  font-size: 0.8rem;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border: 1px solid #f47fac;
+}
+
+.age-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  width: 80%;
+  margin: 0 auto; 
+}
+
+.age-container span {
+  margin-right: 10px;
+}
+
+/* Age picker */
+.age-container input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: #fff;
+  outline: none;
+}
+
+.age-container input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #f47fac;
+  cursor: pointer;
+}
+
+.age-container input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #f47fac;
+  cursor: pointer;
+}
+
+.age-container input[type="range"]::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #f47fac;
+  cursor: pointer;
+}
+
+.age-container input[type="range"]:hover {
+  background: #fff;
+}
+
+.age-container span {
+  margin-right: 10px;
+  white-space: nowrap;
+}

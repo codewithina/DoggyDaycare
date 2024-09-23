@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './DogDetailsStyle.css';
 import Header from './Header'; 
+import placeholderImage from '/src/assets/pic-missing.jpg';
 
 function DogDetails() {
   const { chipNumber } = useParams();
@@ -36,7 +37,11 @@ function DogDetails() {
       
       <div className="dog-details-container">
         <div className="dog-details-image">
-          <img src={dog.img} alt={dog.name} />
+        <img 
+  src={dog.img} 
+  alt={dog.name || 'Hund utan namn'} 
+  onError={(e) => { e.target.onerror = null; e.target.src = placeholderImage; }} 
+/>
         </div>
         <div className="dog-details-info">
           <h1>{dog.name}</h1>
