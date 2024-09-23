@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import './DogDetailsStyle.css';
 import Header from './Header'; 
 import placeholderImage from '/src/assets/pic-missing.jpg';
+import girlIcon from '/src/assets/girl.png';
+import boyIcon from '/src/assets/boy.png';
 
 function DogDetails() {
   const { chipNumber } = useParams();
@@ -28,7 +30,7 @@ function DogDetails() {
     return null;
   }
 
-  const genderIcon = dog.sex === 'female' ? '/src/assets/girl.png' : '/src/assets/boy.png';
+  const genderIcon = dog.sex === 'female' ? girlIcon : boyIcon;
 
   return (
     <div>
