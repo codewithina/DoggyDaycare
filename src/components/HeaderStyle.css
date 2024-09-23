@@ -1,0 +1,113 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    z-index: 10;
+  }
+  
+  .header-left h1 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #f47fac;
+    text-shadow: none;
+  }
+  
+  .header-right {
+    display: flex;
+    gap: 0px;
+  }
+  
+  .header-right a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+  }
+  
+  /* Hamburger-ikon och mobil-styling */
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .hamburger-icon {
+    font-size: 2rem;
+    color: #f47fac;
+  }
+  
+  .header-right {
+    display: flex;
+    gap: 0px;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    /* Döljer den vanliga menyn på små skärmar */
+    .header-right {
+      display: none;
+    }
+  
+    /* Om menyn är öppen (när vi klickat på hamburger-knappen) */
+    .header-right.open {
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(255, 255, 255, 0.9);
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      text-align: center;
+      z-index: 5;
+    }
+  
+    /* Visa hamburger-knappen endast på små skärmar */
+    .menu-toggle {
+      display: block;
+    }
+  
+    /* Mobile-only menu styling */
+    .mobile-menu {
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(255, 255, 255, 0.9);
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      text-align: center;
+      z-index: 5;
+    }
+
+    .mobile-link:hover {
+      color: #fff;
+      background-color: #f47face6;
+      transition: background-color 1s ease-in, color 1s ease-in;
+    }
+  
+    .mobile-link {
+      text-decoration: none;
+      padding: 10px;
+      color: #f47fac;
+      font-size: 1.2rem;
+    }
+
+    .menu-toggle:focus {
+      outline: none;
+    }
+    
+    .mobile-link:focus, 
+    .btn:focus {
+      outline: none;
+    }
+
+  }
