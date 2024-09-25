@@ -50,7 +50,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: calc(100vh - 100px);
   background-color: #f8bdd3;
   color: white;
   text-align: center;

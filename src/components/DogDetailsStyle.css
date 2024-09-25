@@ -2,8 +2,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: calc(100vh - 100px); /* 80px är headerns höjd */
     background-color: #fcd5e4;
+     /* Flytta heron under headern */
 }
 
 .dog-details-container {
