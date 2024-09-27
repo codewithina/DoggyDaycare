@@ -151,24 +151,6 @@
   margin-right: 10px;
   white-space: nowrap;
 }
-/* Grundstil för statusindikatorn */
-.status-indicator {
-  display: inline-block;
-  width: 15px; /* Bredd på pluppen */
-  height: 15px; /* Höjd på pluppen */
-  margin-left: 10px; /* Avstånd från hundens namn */
-  border-radius: 50%; /* Gör den rund */
-}
-
-/* Grön plupp för incheckade hundar */
-.checked-in {
-  background-color: #28a745; /* Grön färg */
-}
-
-/* Röd plupp för ej incheckade hundar */
-.not-checked-in {
-  background-color: #dc3545; /* Röd färg */
-}
 
 @media (max-width: 768px) {
   .image-container .dog-overlay {
