@@ -61,8 +61,6 @@ function DogDetails() {
                 className="gender-icon"
               />
             </p>
-
-            <p><span>Incheckad på dagis:</span> {dog.present ? 'Yes' : 'No'}</p>
             <p><span>Ägare:</span> {dog.owner.name} {dog.owner.lastName}</p>
             <p><span>Telefonnr:</span> {dog.owner.phoneNumber}</p>
           </div>
