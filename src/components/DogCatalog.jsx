@@ -141,7 +141,9 @@ function DogCatalog() {
                 />
                 <div className="dog-overlay">
                   <div className="dog-info">
-                    <h3>{dog.name}</h3>
+                    <h3>{dog.name}
+                    <span className={`status-indicator ${dog.present ? 'checked-in' : 'not-checked-in'}`}></span>
+                    </h3>
                     <p>{dog.age} år</p>
                     <p className="breed">{dog.breed}</p>
                   </div>

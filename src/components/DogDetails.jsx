@@ -46,7 +46,9 @@ function DogDetails() {
             />
           </div>
           <div className="dog-details-info">
-            <h1>{dog.name}</h1>
+            <h1>{dog.name}
+            <span className={`status-indicator ${dog.present ? 'checked-in' : 'not-checked-in'}`}></span>
+            </h1>
             <p id="breed"><span>Ras:</span> {dog.breed}</p>
             <p><span>Ålder:</span> {dog.age} år</p>
 
