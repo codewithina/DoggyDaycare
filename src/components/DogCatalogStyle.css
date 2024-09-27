@@ -2,7 +2,7 @@
 .catalog-page {
   padding-top: 20px;
   background-color: #fce5ee;
-  min-height: calc(100vh - 100px);
+  min-height: 100vh;
   box-sizing: border-box;
 }
 

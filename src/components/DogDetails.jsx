@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './DogDetailsStyle.css';
-import Header from './Header'; 
+import Header from './Header';
 import placeholderImage from '/src/assets/pic-missing.jpg';
 import girlIcon from '/src/assets/girl.png';
 import boyIcon from '/src/assets/boy.png';
@@ -35,37 +35,37 @@ function DogDetails() {
   return (
     <div>
       <Header />
-    <div className="dog-details-page">
-      
-      <div className="dog-details-container">
-        <div className="dog-details-image">
-        <img 
-  src={dog.img} 
-  alt={dog.name || 'Hund utan namn'} 
-  onError={(e) => { e.target.onerror = null; e.target.src = placeholderImage; }} 
-/>
-        </div>
-        <div className="dog-details-info">
-          <h1>{dog.name}</h1>
-          <p id="breed"><span>Ras:</span> {dog.breed}</p>
-          <p><span>Ålder:</span> {dog.age} år</p>
+      <div className="dog-details-page">
 
-          {/* Show gender w icon */}
-          <p>
-            <span>Kön:</span>
+        <div className="dog-details-container">
+          <div className="dog-details-image">
             <img
-              src={genderIcon}
-              alt={dog.sex === 'female' ? 'Girl' : 'Boy'}
-              className="gender-icon"
+              src={dog.img}
+              alt={dog.name || 'Hund utan namn'}
+              onError={(e) => { e.target.onerror = null; e.target.src = placeholderImage; }}
             />
-          </p>
+          </div>
+          <div className="dog-details-info">
+            <h1>{dog.name}</h1>
+            <p id="breed"><span>Ras:</span> {dog.breed}</p>
+            <p><span>Ålder:</span> {dog.age} år</p>
 
-          <p><span>Incheckad på dagis:</span> {dog.present ? 'Yes' : 'No'}</p>
-          <p><span>Ägare:</span> {dog.owner.name} {dog.owner.lastName}</p>
-          <p><span>Telefonnr:</span> {dog.owner.phoneNumber}</p>
+            {/* Show gender w icon */}
+            <p>
+              <span>Kön:</span>
+              <img
+                src={genderIcon}
+                alt={dog.sex === 'female' ? 'Girl' : 'Boy'}
+                className="gender-icon"
+              />
+            </p>
+
+            <p><span>Incheckad på dagis:</span> {dog.present ? 'Yes' : 'No'}</p>
+            <p><span>Ägare:</span> {dog.owner.name} {dog.owner.lastName}</p>
+            <p><span>Telefonnr:</span> {dog.owner.phoneNumber}</p>
+          </div>
         </div>
       </div>
-    </div>
     </div>
   );
 }

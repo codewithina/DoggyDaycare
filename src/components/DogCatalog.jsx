@@ -8,7 +8,7 @@ function DogCatalog() {
   const [dogs, setDogs] = useState([]);
   const [nameSearchTerm, setNameSearchTerm] = useState('');
   const [breedSearchTerm, setBreedSearchTerm] = useState('');
-  const [ageSearchTerm, setAgeSearchTerm] = useState(null); // null för "Alla åldrar"
+  const [ageSearchTerm, setAgeSearchTerm] = useState(null); 
   const [showBreedOptions, setShowBreedOptions] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -56,7 +56,7 @@ function DogCatalog() {
   });
 
   const handleAgeChange = (value) => {
-    setAgeSearchTerm(value === 0 ? null : value); // null för "Alla åldrar"
+    setAgeSearchTerm(value === 0 ? null : value); 
   };
 
   return (
