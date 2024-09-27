@@ -151,3 +151,9 @@
   margin-right: 10px;
   white-space: nowrap;
 }
+
+@media (max-width: 768px) {
+  .image-container .dog-overlay {
+    display: none;
+  }
+}

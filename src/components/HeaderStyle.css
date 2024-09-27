@@ -33,7 +33,7 @@
   background-color: #f47face6;
 }
   
-  /* Hamburger-ikon och mobil-styling */
+  /* Hamburger-icon and small screen styling */
   .menu-toggle {
     display: none;
     background: none;
@@ -57,12 +57,12 @@
   }
   
   @media (max-width: 768px) {
-    /* Döljer den vanliga menyn på små skärmar */
+    /* Hide on small screens */
     .header-right {
       display: none;
     }
   
-    /* Om menyn är öppen (när vi klickat på hamburger-knappen) */
+    /* If menu is open */
     .header-right.open {
       display: flex;
       flex-direction: column;
@@ -75,7 +75,7 @@
       z-index: 5;
     }
   
-    /* Visa hamburger-knappen endast på små skärmar */
+    /* Show on small screens */
     .menu-toggle {
       display: block;
     }
