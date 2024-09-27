@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const WelcomePage = () => {
   return (
     <div className="welcome-page">
-      <video autoPlay muted loop className="background-video">
+      <video autoPlay muted loop playsInline className="background-video">
         <source src={videoBackground} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
