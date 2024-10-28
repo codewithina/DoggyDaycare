@@ -13,7 +13,7 @@ function DogCatalog() {
   const dropdownRef = useRef(null);
 
   useEffect(() => {
-    fetch('https://api.jsonbin.io/v3/b/66ea6857e41b4d34e4325758')
+    fetch('https://api.jsonbin.io/v3/b/671f8717ad19ca34f8bfe8ff')
       .then(response => response.json())
       .then(data => {
         setDogs(data.record);
